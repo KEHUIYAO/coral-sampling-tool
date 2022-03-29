@@ -28,4 +28,4 @@ The tool will ask you to enter an estimate of the following parameters for a giv
 - A rough estimate of coral cover (eyeballing the habitat) (0-20%, 21-40%, 41-60%, 61-80%, >80%).
 - A rough estimate of prevalence of disease (eyeballing the habitat) (<1%, 2-5%, 6-10%, 11-20%, 21-40%, >40%)
 - Number and orientation of transects to survey.
-- 5)	If data exists for a particular site (or if you wish to upload data for a site), you can opt to do so and entries 1-3 will be automatically filled in.
+- If data exists for a particular site (or if you wish to upload data for a site), you can opt to do so and entries 1-3 will be automatically filled in.
