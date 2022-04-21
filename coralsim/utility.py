@@ -1,4 +1,4 @@
-from Simulation import Simulation
+from .Simulation import Simulation
 import pandas as pd
 def calculate_coverage_probability(x:Simulation,n_rep):
     "calculate the coverage probability of prevalence estimation"
