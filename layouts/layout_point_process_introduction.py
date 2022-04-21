@@ -126,6 +126,7 @@ def generate_homogeneous_poisson_process():
         type='number',
         placeholder=0.1,
         value=0.1,
+        step=0.1,
         min=0,
         max=1,
         className='col-sm-6'
@@ -136,8 +137,9 @@ def generate_homogeneous_poisson_process():
         dcc.Input(
             id='intro_coral_size',
             type='number',
-            placeholder=0.006825,
-            value=0.006825,
+            placeholder=0.0068,
+            value=0.0068,
+            step=0.0001,
             className='col-sm-6'
         )], className='row')
 
@@ -148,6 +150,7 @@ def generate_homogeneous_poisson_process():
             type='number',
             placeholder=0.001,
             value=0.001,
+            step=0.001,
             className='col-sm-6'
         )], className='row')
 
@@ -259,7 +262,7 @@ def generate_poisson_clustering_process():
 
     input_parent_intensity = html.Div([
         dcc.Markdown('''parent corals / total corals''', className='col-sm-6'),
-        dcc.Input(id='intro_parent_intensity', type='number', placeholder=0.01, value=0.01, className='col-sm-6')
+        dcc.Input(id='intro_parent_intensity', type='number', placeholder=0.01, value=0.01, step=0.01, className='col-sm-6')
     ],className='row')
 
     input_offspring_range = html.Div([
