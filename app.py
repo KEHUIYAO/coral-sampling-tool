@@ -6,4 +6,4 @@ from callbacks import callback
 if __name__ == '__main__':
     app.layout = layout.generate_layout()
     #app.run_server(debug=True, host='127.0.0.1')
-    app.run_server(debug=True)
+    app.run_server(debug=True)  # if using heroku
