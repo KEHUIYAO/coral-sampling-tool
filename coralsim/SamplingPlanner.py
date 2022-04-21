@@ -1,6 +1,6 @@
 import shapely.geometry as sg
 import numpy as np;  # NumPy package for arrays, random number generation, etc
-from ToolKit import ToolKit
+from .ToolKit import ToolKit
 
 
 class SamplingPlanner:

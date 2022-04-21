@@ -5,8 +5,8 @@ matplotlib.use('Agg')
 import plotly.graph_objects as go
 import numpy as np;  # NumPy package for arrays, random number generation, etc
 import matplotlib.pyplot as plt  # For plotting
-from CoralGenerator import CoralGenerator
-from SamplingPlanner import SamplingPlanner
+from .CoralGenerator import CoralGenerator
+from .SamplingPlanner import SamplingPlanner
 
 
 class Simulation:

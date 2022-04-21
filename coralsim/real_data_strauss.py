@@ -1,8 +1,8 @@
 from Simulation import Simulation
 import shapely.geometry as sg
 import numpy as np
-from utility import calculate_coverage_probability
-from utility import power_comparison_using_different_number_of_toolkits
+from .utility import calculate_coverage_probability
+from .utility import power_comparison_using_different_number_of_toolkits
 
 
 # simulation setting's parameters that need to be specified

@@ -6,7 +6,7 @@ import numpy as np  # NumPy package for arrays, random number generation, etc
 import matplotlib.pyplot as plt  # For plotting
 import plotly.graph_objects as go
 import scipy
-from Coral import Coral
+from .Coral import Coral
 
 import re
 
