@@ -1,8 +1,8 @@
 import dash_html_components as html
 import numpy as np
 import sys
-sys.path.insert(1, '/Users/kehuiyao/Desktop/coral_sampling')
-from Simulation import Simulation
+
+from coralsim.Simulation import Simulation
 import shapely.geometry as sg
 from pyproj import Proj
 
