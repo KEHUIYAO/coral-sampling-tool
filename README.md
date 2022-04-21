@@ -3,6 +3,7 @@ This repository contains the source code of a dash app for coral sampling. An on
 [heroku](https://coral-sampling.herokuapp.com/).
 
 
+
 ## How to use
 1. Make sure python 3.7 is installed properly on your computer.
 2. Download the repository, then run the following command inside this directory to install the necessary packages.
