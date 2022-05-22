@@ -110,7 +110,7 @@ To achieve this functionality, the tool let the users simulate corals on a lands
 
 #### Workflow
 
-The main workflow of the tool is: 1) Select a region where your survey is conducted. 2) Specify how the corals are distributed in the region. 3) Determine how many transect should be used during a survey. 4. Obtain the estimated power and accuracy and sampling plans.
+The main workflow of the tool is: 1) Select a region where your survey is conducted. 2) Specify how the corals are distributed in the region. 3) Determine how many transect should be used during a survey. 4. Obtain the estimated power and accuracy and sampling plans. There are three tabs under the title: Introduction, Map corals and Simulation. The Introduction panel describes the goal of this sampling tool and what functionalities it provides. The Point Process Introduction focuses on different spatial point processes, under which the coral can be generated in a 2D space. This can be used to create coral distributions of interest. The Simulation tab contains the user-interface for controlling the coral simulation, survey design and calculating the power of the survey. 
 
 #### Survey Methods   
 ** Line intercept method **
@@ -136,7 +136,18 @@ The figures below demonstrate survey methods. The left one shows how diver count
 
 def generate_basic_usage():
     return dcc.Markdown('''
-There are three tabs under the title: Introduction, Point Process Introduction and Simulation. The Introduction panel describes the goal of this sampling tool and what functionalities it provides. The Point Process Introduction focuses on different spatial point processes, under which the coral can be generated in a 2D space. This can be used to create coral distributions of interest. The Simulation tab contains the user-interface for controlling the coral simulation, survey design and calculating the power of the survey. More detailed instructions are described after you click on the respective tabs.
+#### Coral distribution
+                
+** Homogeneous poisson process **              
+A homogeneous poisson process, with intensity lambda, is the basic 'reference' or 'benchmark' model of a point process to generate a distribution of coral colonies on the landscape.  It is sometimes called complete spatial randomness (CSR). Its basic properties are: 1) the number of coral colonies falling in any region A has a Poisson distribution with mean = lambda x area(A); 2) given that there are n colonies inside region A, the locations of these colonies are independent and uniformly distributed inside A; and 3) the contents of two disjoint regions A and B are independent.
+                
+** Inhomogeneous poisson process **
+
+In general, the intensity of an inhomogeneous Poisson process will vary based on local conditions, so the expected number of coral colonies falling within a small region of area depends on the intensity rate at that region, which is characterized by a spatially varying intensity function. Other properties follow the same as the homogeneous poisson process.
+    
+** Poisson clustering process ** 
+
+In a Poisson cluster process, we begin with a Poisson process Y of 'parent' coral colonies. Each parent colony then givens rise to a finite set of 'offspring' colonies according to some stochastic mechanism.  This tool uses a Matern cluster process to generate offspring colonies with the parent colonies come from a homogeneous Poisson process with intensity k, and each parent having a Poisson(u) number of offspring, that are independently and uniformly distributed in a disc of radius r centered around the parent. Here, we provide an interactive plot of the Matern cluster process, one can input different parent intensity rates and offspring intensity rates to see how the distribution of coral colonies changes.
 
     ''')
 
