@@ -249,7 +249,7 @@ def generate_user_input():
                                type='number',
                                placeholder=0,
                                value = 0,
-                               step=0.1,
+                               step=0.01,
                                min=0,
                                max=1,
                                id='prop_cover',
