@@ -69,7 +69,7 @@ def generate_tab():
         # ]),
 
 
-        dcc.Tab(label='Point Process Introduction', children=[layout_point_process_introduction.generate_point_process_introduction()]),
+        dcc.Tab(label='Map Corals', children=[layout_point_process_introduction.generate_point_process_introduction()]),
 
         dcc.Tab(label='Simulation', children=[
             layout_simulation.generate_simulation_tab()
