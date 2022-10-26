@@ -58,23 +58,23 @@ def update_output(list_of_contents, list_of_names, list_of_dates):
 
 
 
-# function to update the range slider
-@app.callback(
-    Output('RangeSlider-Year', 'min'),
-    Output('RangeSlider-Year', 'max'),
-    Output('RangeSlider-Year', 'marks'),
-    Output('RangeSlider-Year', 'value'),
-    Input('data', 'data')
-)
-def generate_range_slider(data):
-    data = pd.read_json(data, orient='split')
-    return (data.Year.astype('int32').min(),
-           data.Year.astype('int32').max(),
-           {i: '{}'.format(i) for i in
-               range(data.Year.astype('int32').min(),
-                     data.Year.astype('int32').max() + 1)},
-         [data.Year.astype('int32').min(), data.Year.astype('int32').max()])
-
+# # function to update the range slider
+# @app.callback(
+#     Output('RangeSlider-Year', 'min'),
+#     Output('RangeSlider-Year', 'max'),
+#     Output('RangeSlider-Year', 'marks'),
+#     Output('RangeSlider-Year', 'value'),
+#     Input('data', 'data')
+# )
+# def generate_range_slider(data):
+#     data = pd.read_json(data, orient='split')
+#     return (data.Year.astype('int32').min(),
+#            data.Year.astype('int32').max(),
+#            {i: '{}'.format(i) for i in
+#                range(data.Year.astype('int32').min(),
+#                      data.Year.astype('int32').max() + 1)},
+#          [data.Year.astype('int32').min(), data.Year.astype('int32').max()])
+#
 
 # core function to update the survey graph
 # @app.callback(

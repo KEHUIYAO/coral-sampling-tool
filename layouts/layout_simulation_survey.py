@@ -39,10 +39,10 @@ def generate_survey_graph():
             className='col-sm-11',
             style={'padding-top': '1%'}
         ),
-        # the year range slider
-        html.Div([dcc.RangeSlider(id='RangeSlider-Year',
-                                  vertical=True
-                                  )], className='col-sm-1')
+        # # the year range slider
+        # html.Div([dcc.RangeSlider(id='RangeSlider-Year',
+        #                           vertical=True
+        #                           )], className='col-sm-1')
         # html.Div(['ddddd'], className='col-sm-6'),
         # html.Div(['dddddd'], className='col-sm-6')
     ], className='row')
