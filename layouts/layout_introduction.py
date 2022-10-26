@@ -103,15 +103,6 @@ def generate_introduction():
     "return a Div containing the introduction of the app"
     # introduction text
     return  dcc.Markdown(''' 
-#### Overview
-
-This is an interactive simulation tool to inform design of surveys for estimating density and diseases of coral reefs. Specifically, this tool: 1) Estimates the proportion cover of corals and associated precision using line intercept method within a region. 2) Assess the level of effort required to estimate the prevalence of lesions on corals with a desired precision. 3) Calculates the power of a given survey design using the coverage probability of confidence intervals (i.e., the probability the true simulation value fell within the confidence interval bounds) of the estimated cover proportion or prevalence.  
-To achieve this functionality, the tool let the users simulate corals on a landscape following customizable spatial point process to characterize coral distribution in a selected region on the map. It then  allows them to decide how many transects should be assigned during a survey to estimate coral proportion cover and coral disease prevalence.
-
-#### Workflow
-
-The main workflow of the tool is: 1) Select a region where your survey is conducted. 2) Specify how the corals are distributed in the region. 3) Determine how many transect should be used during a survey. 4. Obtain the estimated power and accuracy and sampling plans. There are three tabs under the title: Introduction, Map corals and Simulation. The Introduction panel describes the goal of this sampling tool and what functionalities it provides. The Point Process Introduction focuses on different spatial point processes, under which the coral can be generated in a 2D space. This can be used to create coral distributions of interest. The Simulation tab contains the user-interface for controlling the coral simulation, survey design and calculating the power of the survey. 
-
 #### Survey Methods   
 ** Line intercept method **
     

@@ -62,9 +62,9 @@ def power_calculation(n_clicks, prop_estimation, n_rep, selected_data, dropdown_
 
     # power calculation by repeated simulation
     # single toolkit
-    # n_toolkits = [n_toolkits]
+    n_toolkits = [n_toolkits]
     # multiple toolkits
-    n_toolkits = [1, 2, 3, 4, 5]
+    #n_toolkits = [1, 2, 3, 4, 5]
 
 
     df = utility.power_comparison_using_different_number_of_toolkits_2(setting, n_toolkits, n_rep, write_to_csv=False,

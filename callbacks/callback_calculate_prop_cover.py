@@ -38,6 +38,6 @@ def show_prop_cover_estimate(data, selected_data):
 
 
 
-    return {"display": "block"}, text, prop_cover
+    return {"display": "none"}, text, prop_cover
 
 

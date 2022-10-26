@@ -28,7 +28,7 @@ def generate_survey_graph():
                   )
               ], className='col-sm-6')
                  ,
-              html.Div([],className='col-sm-3'),], className='row')
+              html.Div([],className='col-sm-3'),], className='row', style={'display':'None'})
 
     # figure
     figure = html.Div([

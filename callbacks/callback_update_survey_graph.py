@@ -77,21 +77,43 @@ def generate_range_slider(data):
 
 
 # core function to update the survey graph
+# @app.callback(
+#     Output('graph_data_visualization', 'figure'),
+#     Input('RangeSlider-Year', 'value'),
+#     Input('data', 'data')
+# )
+# def update_graph_data_visualization(value, data):
+#     #print(data)
+#     data = pd.read_json(data, orient='split')
+#     data['Year'] = data['Year'].astype(str)  # convert year to be categorical
+#     start_year = value[0]
+#     end_year = value[1]
+#     selected_years = [str(i) for i in list(range(start_year, end_year + 1))]
+#     subdata = data[data.Year.isin(selected_years)]
+#     print(subdata)
+#     #fig = px.scatter_mapbox(subdata, lat="Latitude", lon="Longitude", color="Year", hover_data=["Site"])
+#     fig = px.scatter_mapbox(lat=['42'],
+#         lon=['-97'],
+#         size=[0],
+#         zoom=3
+#
+#
+#         )
+#
+#     fig.update_layout(mapbox_style='open-street-map', height=600)
+#     return fig
+
 @app.callback(
     Output('graph_data_visualization', 'figure'),
-    Input('RangeSlider-Year', 'value'),
     Input('data', 'data')
 )
-def update_graph_data_visualization(value, data):
-    #print(data)
-    data = pd.read_json(data, orient='split')
-    data['Year'] = data['Year'].astype(str)  # convert year to be categorical
-    start_year = value[0]
-    end_year = value[1]
-    selected_years = [str(i) for i in list(range(start_year, end_year + 1))]
-    subdata = data[data.Year.isin(selected_years)]
-    fig = px.scatter_mapbox(subdata, lat="Latitude", lon="Longitude", color="Year", hover_data=["Site"])
+def update_graph_data_visualization(data):
+    fig = px.scatter_mapbox(lat=['42'],
+        lon=['-97'],
+        size=[0],
+        zoom=3
+        )
+
     fig.update_layout(mapbox_style='open-street-map', height=600)
     return fig
-
 

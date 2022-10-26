@@ -75,7 +75,7 @@ def generate_tab():
             layout_simulation.generate_simulation_tab()
         ]),
 
-        dcc.Tab(label='Help', children=[layout_introduction.generate_introduction_tab()])
+        dcc.Tab(label='Background Information', children=[layout_introduction.generate_introduction_tab()])
 
     ], id='main_tab')
 

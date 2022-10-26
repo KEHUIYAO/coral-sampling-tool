@@ -8,6 +8,7 @@ from main import app
 from coralsim import CoralGenerator
 from dash.exceptions import PreventUpdate
 
+
 # update homogeneous poisson process
 @app.callback(
     Output('homogeneous_poisson_process', 'figure'),

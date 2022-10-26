@@ -6,7 +6,7 @@ def generate_simulation_procedure():
     return html.Div([
         # instruction button to notify the user how to use the simulation tool
 
-        dcc.Markdown(children='''There are three panels on the right: Survey, Transect Visualization and Power Calculation. The Survey tab contains a figure which shows all the DRM historical survey locations by year on the map. You can also use the **Select Files** button to select new survey data and update the figure. To begin with, you first click the **Start Simulation** button, then you will be asked to select a region to survey in the figure using the map selection tools on the top of the figure. Notice that the map selection tool bar will only appear when you hover your mouse over the figure. The selected region represents the location you want to conduct your new survey. After that, the app will help you estimate the proportion cover of the coral inside this region based on the historical survey data, and you are required to select a point process from which the coral will be simulated inside the region. If you have questions about how the data will be generated under different point processes, you can checkout the ** Point Process Introduction ** tab. After selecting a point process, you then need to specify the parameters that characterize this point process.  Additionally, other parts such as the transect, disease prevalence, and coral size can also be customized.'''),
+        dcc.Markdown(children='''There are three panels on the right: Survey, Transect Visualization and Power Calculation. The Survey tab contains a map where you can select survey regions. To begin with, you first click the **Start Simulation** button, then you will be asked to select a region to survey in the figure using the map selection tools on the top of the figure. Notice that the map selection tool bar will only appear when you hover your mouse over the figure. The selected region represents the location you want to conduct your new survey. After that, you are required to select a point process from which the coral will be simulated inside the region. If you have questions about how the data will be generated under different point processes, you can checkout the ** Map Corals ** tab. After selecting a point process, you then need to specify the parameters that characterize this point process.  Additionally, other parts such as the transect, disease prevalence, and coral size can also be customized.'''),
 
         html.Button('Start Simulation', id='button_select_region', n_clicks=0),
 
@@ -28,7 +28,7 @@ def generate_simulation_procedure():
 
         # based on selected process, let user specify the parameter of the process
         dcc.Markdown(id='text_input_process_parameters', children='''
-                Specify the parameters of the certain point process under which the coral is simulated. Also specify other inputs like disease prevalence, and the transect. For how different parameters change the look of a certain point process, you can checkout the **Point Process Introduction** section. There is a playground at the bottom. For a given point process, you can adjust the parameters to see how the simulation data changes spatially. Finally, if you find one simulation under a combination of parameters is quite realistic, you can use the **port** function to copy these parameters to here below.''', style={"display": "none"}),
+                Specify the parameters of the certain point process under which the coral is simulated. Also specify other inputs like disease prevalence, and the transect. For how different parameters change the look of a certain point process, you can checkout the **Map Corals** section. There is a playground at the bottom. For a given point process, you can adjust the parameters to see how the simulation data changes spatially. Finally, if you find one simulation under a combination of parameters is quite realistic, you can use the **port** function to copy these parameters to here below.''', style={"display": "none"}),
 
         # user-input area
         # html.Div(id='input_process_parameters', style={"display": "none"}),
@@ -247,8 +247,8 @@ def generate_user_input():
     prop_cover = html.Div(html.Div([html.A('proportion cover: ', className='col-sm-4', id='prop_cover_tooltip'),
                            dcc.Input(
                                type='number',
-                               placeholder=0,
-                               value = 0,
+                               placeholder=0.03,
+                               value = 0.03,
                                step=0.01,
                                min=0,
                                max=1,
