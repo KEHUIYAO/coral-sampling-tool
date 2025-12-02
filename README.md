@@ -2,19 +2,27 @@
 This repository contains the source code of a dash app for coral sampling. An online version of this tool is hosted on
 [heroku](https://coral-sampling.herokuapp.com/).
 
+## Prerequisites
+- **Conda** (Miniconda or Anaconda) - [Download here](https://docs.conda.io/en/latest/miniconda.html)
+- **Git** (to clone the repository)
+- **Python 3.7** (will be installed via conda)
 
+## Quick Start 
 
-## How to use
-1. Make sure python 3.7 is installed properly on your computer.
-2. Download the repository, then run the following command inside this directory to install the necessary packages.
+1. Clone or download this repository
+2. Navigate to the project directory
+3. Run the automated setup script:
 ```console
-$ python -m pip install -r requirements.txt
+$ chmod +x setup.sh
+$ ./setup.sh
 ```
-3. After that, run
+4. Activate the environment and run the app:
 ```console
+$ conda activate coral-sampling
 $ python app.py
 ```
-4. Click the link which pops up in the terminal, and the dash app will appear.
+5. Click the link that appears in the terminal to open the app in your browser.
+
 
 ## What is a coral sampling tool
 ### Overview
